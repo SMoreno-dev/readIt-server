@@ -52,21 +52,21 @@ Features include:
 | ----------- | ----------- | ----------- | ----------- |
 | /auth/signup | POST | (user, email, password) | Sign Up |
 | /auth/signin | POST | (user, password) | Sign In |
-| /comment/get-comments | POST | (userId, postId) | Comments for a single post |
-| /comment/submit-comment | POST | (userId, comment, postId | Creates a comment for a post |
-| /comment/delete-comment| POST | (userId, commentId) | Deletes a comment |
-| /comment/get-replies | POST | (userId, commentId | Replies for a single comment |
-| /comment/submit-reply | POST | (userId, reply, prevCommentId) | Creates a reply for a comment |
+| /comment/list | POST | (userId, postId) | Comments for a single post |
+| /comment/new | POST | (userId, comment, postId) | Creates a comment for a post |
+| /comment | DELETE | (userId, commentId) | Deletes a comment |
+| /comment/replies/list | POST | (userId, commentId | Replies for a single comment |
+| /comment/replies/new | POST | (userId, reply, prevCommentId) | Creates a reply for a comment |
 | /frontpage/feed | POST | (userId, sortByVote, limit) | Previews for posts from different subreddits |
-| /post/submit | POST | (id, subreddit, title, post) | Creates a post |
-| /post/fetch | POST | (userId, subredditName, postId) | A post |
+| /post/new | POST | (id, subreddit, title, post) | Creates a post |
+| /post | POST | (userId, subredditName, postId) | A post |
 | /post/vote | POST | (userId, postId, vote) | Submits an "upvote" or "downvote" for a post |
 | /post/votes | POST | (userId, postId) | Votes for a single post |
-| /post/delete | POST | (userId, postId) | Deletes a post |
+| /post | DELETE | (userId, postId) | Deletes a post |
 | /subreddit/subscribe | POST | (subreddit, userId, subscription) | Subscribes an user to a subreddit |
 | /subreddit/data | POST | (subredditName, userId) | Subreddit information |
 | /subreddit/list | GET | none | List of subreddits |
-| /subreddit/previews | POST | (userId, subredditName, limit, orderByVotes) | Previews for posts from a single subreddit |
+| /subreddit/feed | POST | (userId, subredditName, limit, orderByVotes) | Previews for posts from a single subreddit |
 | /user/posts | POST | (userId, profileUser, limit, orderByVotes) | Previews for posts from a single user |
 | /user/subscriptions | POST | (userId, username) | List of subscriptions for a single user |
 
